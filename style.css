@@ -10,11 +10,18 @@
 	display: inline-block;
 	text-align: center;
 }
-#garden-body #book-dis{
-  padding: 10px;
+p {
+  padding: 5px;
   margin: 8px;
   text-align: justify;
-  background-color: blue;
+}
+img{
+  padding: 5px;
+  margin: 8px;
+}
+a{
+  padding: 5px;
+  margin: 8px;
 }
 ul {
   list-style-type: none;
