@@ -5,13 +5,22 @@
   grid-template-columns: auto auto auto auto;
   text-align: justify;
 }
+.book{
+  margin: 5px;
+  padding: 5px;
+
+}
 
 #head {
 	display: flex;
   justify-content: center;
-
-
-  
+}
+.book-tital{
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 20px; 
 }
 
 input {
@@ -25,12 +34,15 @@ p {
   text-align: justify;
 }
 img{
-  padding: 5px;
-  margin: 8px;
+  padding: 2px;
+  margin: 15px;
 }
 a{
+  text-align: center;
   padding: 5px;
   margin: 8px;
+  text-decoration: none;
+  color: #4CAF50;
 }
 ul {
   list-style-type: none;
@@ -67,4 +79,9 @@ li a:hover {
 }
 .dots{
   display: inline;
+}
+button{
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
 }
