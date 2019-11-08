@@ -7,15 +7,20 @@ var $DisplyaPage  = function(){
 		for (var i = 0; i < books.length; i++) {
 			var $book = books[i]
 			var $bookDiv = $('<div class="book"></div>');
-			$bookDiv.html('<img class="book-img" id="i'+ i +'"  src="' +$book.img +'"><a class="book-tital" id="t'+i+'"  href="#">'+ $book.title +'</a><p id="a'+i+'" class="book-auther">by : '+ $book.auther +'</p><p id="d'+i+'" class="book-dis">'+ $book.description.slice(0,$book.description.length/2) +'<span id="dots">...</span><span id="more"> "'+ $book.description.slice(0,$book.description.length/2)  +'"</span></p> <p class="genre" id="g'+i+'">'+$book.genre+'</p><button id="'+i+'" class="toRead-btn">To Read</button><button onclick="myFunction()" id="myBtn'+i+'">Read more</button>');
+			$bookDiv.html('<img class="book-img" id="i'+ i +'"  src="' +$book.img +'"><a class="book-tital" id="t'+i+'"  href="#">'+ $book.title +'</a><p id="a'+i+'" class="book-auther">by : '+ $book.auther +'</p><p id="d'+i+'" class="book-dis">'+ $book.description.slice(0,$book.description.length/4) +'<span class="dots" id="dotsm'+i+'">...</span><span class="more" id="morem'+i+'"> "'+ $book.description.slice(0,$book.description.length/1.333333333333)  +'"</span></p> <p class="genre" id="g'+i+'">'+$book.genre+'</p><button  id="'+i+'" class="toRead-btn">To Read</button><button class="btn" id="m'+i+'">Read more</button>');
 			$bookDiv.appendTo($garden)
 		}
-		
+
+		addSearchGenre()
+		addToRead()
+		readMore()
 }
 
  $(document).ready($DisplyaPage())
 
- $("#search-input").on('keyup', function (e) {
+ function addSearchGenre(){
+
+ $("#search-input").on('keydown', function (e) {
  	var $search = $('#search-input').val()
  	
  	
@@ -31,7 +36,7 @@ var $DisplyaPage  = function(){
 	        	if (books[i].genre.includes($search)) {
 					var $book = books[i]
 					var $bookDiv = $('<div class="book"></div>');
-					$bookDiv.html('<img class="book-img" id="i'+ i +'"  src="' +$book.img +'"><a class="book-tital" id="t'+i+'"  href="#">'+ $book.title +'</a><p id="a'+i+'" class="book-auther">by : '+ $book.auther +'</p><p id="d'+i+'" class="book-dis">'+ $book.description.slice(0,$book.description.length/2) +'<span id="dots">...</span><span id="more"> "'+ $book.description.slice(0,$book.description.length/2)  +'"</span></p> <p class="genre" id="g'+i+'">'+$book.genre+'</p><button id="'+i+'" class="toRead-btn">To Read</button><button onclick="myFunction()" id="myBtn'+i+'">Read more</button>');
+					$bookDiv.html('<img class="book-img" id="i'+ i +'"  src="' +$book.img +'"><a class="book-tital" id="t'+i+'"  href="#">'+ $book.title +'</a><p id="a'+i+'" class="book-auther">by : '+ $book.auther +'</p><p id="d'+i+'" class="book-dis">'+ $book.description.slice(0,$book.description.length/4) +'<span  class="dots" id="dotsm'+i+'">...</span><span class="more" id="morem'+i+'"> "'+ $book.description.slice(0,$book.description.length/1.333333333333)  +'"</span></p> <p class="genre" id="g'+i+'">'+$book.genre+'</p><button  id="'+i+'" class="toRead-btn">To Read</button><button class="btn" id="m'+i+'">Read more</button>');
 					$bookDiv.appendTo($garden)
 				}
 			}
@@ -40,13 +45,12 @@ var $DisplyaPage  = function(){
 		$DisplyaPage()
 			}
 });
+}
 
-// $().on('click',function () {
-//  	// body...
-// 	 	  var $id = $(this)attr("id")
-// 	 	  console.log($id)
-//  })
+
+
 function notify() {
+
   alert( $(this).attr('id') );
   console.log($(this))
   var index = $(this).attr('id') 
@@ -61,8 +65,13 @@ function notify() {
 return MakeToRead($bookTitel, $bookAuther, $bookgenre, $bookImg, $bookDis, $stats)
 }
 
+function addToRead(){
 
-$( "button" ).on( "click", notify );
+$( ".toRead-btn" ).on( "click", notify );
+
+}
+
+
 
 
 function MakeToRead(title, auther, genre, img, description, stats) {
@@ -88,18 +97,25 @@ $('#ToReadList').on('click', function(){
 		for (var i = 0; i < toRead.length; i++) {
 			var $book = toRead[i]
 			var $bookDiv = $('<div class="book"></div>');
-			$bookDiv.html('<img class="book-img" id="i'+ i +'"  src="' +$book.img +'"><a class="book-tital" id="t'+i+'"  href="#">'+ $book.title +'</a><p id="a'+i+'" class="book-auther">by : '+ $book.auther +'</p><p id="d'+i+'" class="book-dis">'+ $book.description +'</p> <p class="genre" id="g'+i+'">'+$book.genre+'</p>');
+			$bookDiv.html('<img class="book-img" id="i'+ i +'"  src="' +$book.img +'"><a class="book-tital" id="t'+i+'"  href="#">'+ $book.title +'</a><p id="a'+i+'" class="book-auther">'+ $book.auther +'</p><p id="d'+i+'" class="book-dis">'+ $book.description +'</p> <p class="genre" id="g'+i+'">'+$book.genre+'</p>');
 			$bookDiv.appendTo($garden)
 		}
 	
 })
 
 
+$('#home1').on('click', function(){
+	$DisplyaPage()
+} )
 
 function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
+	
+	var index = $(this).attr('id') 
+ 
+  var dots = document.getElementById('dots'+index);
+  var moreText = document.getElementById('more'+index);
+  var btnText = index;
+
 
   if (dots.style.display === "none") {
     dots.style.display = "inline";
@@ -110,4 +126,9 @@ function myFunction() {
     btnText.innerHTML = "Read less"; 
     moreText.style.display = "inline";
   }
+}
+
+
+function readMore(){
+$( ".btn" ).on( "click",  myFunction );
 }

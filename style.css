@@ -7,8 +7,17 @@
 }
 
 #head {
-	display: inline-block;
-	text-align: center;
+	display: flex;
+  justify-content: center;
+
+
+  
+}
+
+input {
+  border: 2px solid black;
+  border-radius: 2px;
+  padding: 5px;
 }
 p {
   padding: 5px;
@@ -52,4 +61,10 @@ li a:hover {
 
 .active {
   background-color: #4CAF50;
+}
+.more{
+  display: none;
+}
+.dots{
+  display: inline;
 }
