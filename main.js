@@ -1,3 +1,10 @@
+
+// first we are traing to creat the display function that will be responseble for filling the bage with data from our data file
+
+// the display finction works by 
+// we are looping over the books array which countanies our books
+// then puting our data in a div
+// then push that div to its contaner 
 var $DisplyaPage  = function(){
 	// body...
 	
@@ -7,7 +14,7 @@ var $DisplyaPage  = function(){
 		for (var i = 0; i < books.length; i++) {
 			var $book = books[i]
 			var $bookDiv = $('<div class="book"></div>');
-			$bookDiv.html('<img class="book-img" id="i'+ i +'"  src="' +$book.img +'"><a class="book-tital" id="t'+i+'"  href="#">'+ $book.title +'</a><p id="a'+i+'" class="book-auther">by : '+ $book.auther +'</p><p id="d'+i+'" class="book-dis">'+ $book.description.slice(0,$book.description.length/4) +'<span class="dots" id="dotsm'+i+'">...</span><span class="more" id="morem'+i+'"> "'+ $book.description.slice(0,$book.description.length/1.333333333333)  +'"</span></p> <p class="genre" id="g'+i+'">'+$book.genre+'</p><button  id="'+i+'" class="toRead-btn">To Read</button><button class="btn" id="m'+i+'">Read more</button>');
+			$bookDiv.html('<img class="book-img" id="i'+ i +'"  src="' +$book.img +'"><div class="bookTitelDiv"><a class="book-tital" id="t'+i+'"  href="#">'+ $book.title +'</a></div><p id="a'+i+'" class="book-auther">by : '+ $book.auther +'</p><p id="d'+i+'" class="book-dis">'+ $book.description.slice(0,$book.description.length/4) +'<span class="dots" id="dotsm'+i+'">...</span><span class="more" id="morem'+i+'"> "'+ $book.description.slice(0,$book.description.length/1.333333333333)  +'"</span></p> <p class="genre" id="g'+i+'">'+$book.genre+'</p><button  id="'+i+'" class="toRead-btn">To Read</button><button class="btn" id="m'+i+'">Read more</button>');
 			$bookDiv.appendTo($garden)
 		}
 
@@ -17,6 +24,12 @@ var $DisplyaPage  = function(){
 }
 
  $(document).ready($DisplyaPage())
+
+ // here we are traing to make our search function
+ // the search works by 
+ // giving on click function to the input tag, and monitring the enter key
+ // if the search is not empty and the key preased then we loob over the array of data and tray to find any thing similar the that genre
+ // otherways if its empty we will retrive our display function
 
  function addSearchGenre(){
 
@@ -36,7 +49,7 @@ var $DisplyaPage  = function(){
 	        	if (books[i].genre.includes($search)) {
 					var $book = books[i]
 					var $bookDiv = $('<div class="book"></div>');
-					$bookDiv.html('<img class="book-img" id="i'+ i +'"  src="' +$book.img +'"><a class="book-tital" id="t'+i+'"  href="#">'+ $book.title +'</a><p id="a'+i+'" class="book-auther">by : '+ $book.auther +'</p><p id="d'+i+'" class="book-dis">'+ $book.description.slice(0,$book.description.length/4) +'<span  class="dots" id="dotsm'+i+'">...</span><span class="more" id="morem'+i+'"> "'+ $book.description.slice(0,$book.description.length/1.333333333333)  +'"</span></p> <p class="genre" id="g'+i+'">'+$book.genre+'</p><button  id="'+i+'" class="toRead-btn">To Read</button><button class="btn" id="m'+i+'">Read more</button>');
+					$bookDiv.html('<img class="book-img" id="i'+ i +'"  src="' +$book.img +'"><div class="bookTitelDiv"><a class="book-tital" id="t'+i+'"  href="#">'+ $book.title +'</a></div><p id="a'+i+'" class="book-auther">by : '+ $book.auther +'</p><p id="d'+i+'" class="book-dis">'+ $book.description.slice(0,$book.description.length/4) +'<span  class="dots" id="dotsm'+i+'">...</span><span class="more" id="morem'+i+'"> "'+ $book.description.slice(0,$book.description.length/1.333333333333)  +'"</span></p> <p class="genre" id="g'+i+'">'+$book.genre+'</p><button  id="'+i+'" class="toRead-btn">To Read</button><button class="btn" id="m'+i+'">Read more</button>');
 					$bookDiv.appendTo($garden)
 				}
 			}
@@ -47,7 +60,10 @@ var $DisplyaPage  = function(){
 });
 }
 
-
+// here in notify we are traing to git the data from the div which have been cliced by the button
+// so we have toread button in one class and also has a unique id for it all 
+// by giving a on click property to the notify function first we ar gitting the id of that button
+// by gitting the id of the button
 
 function notify() {
 
@@ -97,7 +113,7 @@ $('#ToReadList').on('click', function(){
 		for (var i = 0; i < toRead.length; i++) {
 			var $book = toRead[i]
 			var $bookDiv = $('<div class="book"></div>');
-			$bookDiv.html('<img class="book-img" id="i'+ i +'"  src="' +$book.img +'"><a class="book-tital" id="t'+i+'"  href="#">'+ $book.title +'</a><p id="a'+i+'" class="book-auther">'+ $book.auther +'</p><p id="d'+i+'" class="book-dis">'+ $book.description +'</p> <p class="genre" id="g'+i+'">'+$book.genre+'</p>');
+			$bookDiv.html('<img class="book-img" id="i'+ i +'"  src="' +$book.img +'"><div class="bookTitelDiv"><a class="book-tital" id="t'+i+'"  href="#">'+ $book.title +'</a><div><p id="a'+i+'" class="book-auther">'+ $book.auther +'</p><p id="d'+i+'" class="book-dis">'+ $book.description +'</p> <p class="genre" id="g'+i+'">'+$book.genre+'</p>');
 			$bookDiv.appendTo($garden)
 		}
 	
