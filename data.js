@@ -1,3 +1,7 @@
+// this is our data file which the data stored in an array to make it easier to loop over it 
+// and evry book we have is stored in an object inside every index of that array 
+// makeing it the closest thing to a json file
+
 var books = [
 	 {
 		title :'Aion: Researches into the Phenomenology of the Self' ,

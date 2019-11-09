@@ -63,7 +63,8 @@ var $DisplyaPage  = function(){
 // here in notify we are traing to git the data from the div which have been cliced by the button
 // so we have toread button in one class and also has a unique id for it all 
 // by giving a on click property to the notify function first we ar gitting the id of that button
-// by gitting the id of the button
+// by gitting the id of the button and because the id of the other elemints in that div are disgned in way to be similer to it so we can take the data from it and push to ToRead list
+// so firs we take the id from the button then we take the other data from it using jquary and give it to factory function MakeToRead which will push to the array 
 
 function notify() {
 
@@ -104,6 +105,9 @@ function MakeToRead(title, auther, genre, img, description, stats) {
 	toRead.push(toReadobj)
 	console.log(toRead)
 }
+
+// here we are making the disply for the To Read List page
+// by the same anolge in but from a diffrint arry which is the disply function 
  
 $('#ToReadList').on('click', function(){
 
@@ -119,11 +123,14 @@ $('#ToReadList').on('click', function(){
 	
 })
 
-
+//  here we are giving the on click function to retrev the home page
 $('#home1').on('click', function(){
 	$DisplyaPage()
 } )
 
+
+// here we are making the read more function to make our discription shorter by also by taking the id of the preseed button and then giting the 
+// dots id and more id and toggol between ther style.display property from non to inline
 function myFunction() {
 	
 	var index = $(this).attr('id') 
@@ -144,7 +151,7 @@ function myFunction() {
   }
 }
 
-
+// giving on click function to the readmore button
 function readMore(){
 $( ".btn" ).on( "click",  myFunction );
 }
