@@ -53,6 +53,8 @@ var $DisplyaPage  = function(){
 					$bookDiv.appendTo($garden)
 				}
 			}
+		addToRead()
+		readMore()
 	    }
 	} else {
 		$DisplyaPage()

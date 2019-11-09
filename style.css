@@ -10,7 +10,9 @@
 
 }
 .bookTitelDiv{
-  padding: 0px 10px 0px 20px;
+  
+  padding: 0px 8px 0px 8px;
+  text-align: justify;
 }
 
 #head {
@@ -19,8 +21,8 @@
 }
 .book-tital{
   text-align: justify;
-  margin: 5px 20px 5px 20px;
-  padding: 5px;
+/*  margin: 5px 10px 5px 20px;
+  padding: 5px;*/
   text-decoration: none;
   font-size: 20px; 
 }
@@ -40,8 +42,8 @@ img{
   margin: 15px;
 }
 a{
-  padding: 5px;
-  margin: 8px;
+/*  padding: 5px;
+  margin: 8px;*/
   text-decoration: none;
   color: #4CAF50;
 }

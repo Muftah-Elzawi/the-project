@@ -12,7 +12,7 @@ var books = [
 		price : 50 
 	},
 	 {
-		title : 'The Da Vinci Code',
+		title :'The Da Vinci Code',
 		auther : 'Dan Brown' ,
 		genre : 'Mystery' ,
 		img : './imgfolder/the davinci code.jpg' ,
@@ -20,7 +20,7 @@ var books = [
 		price : 120
 	},
 	 {
-		title : 'Make Your Bed' ,
+		title :'Make Your Bed' ,
 		auther : 'William H. McRaven',
 		genre : 'Business',
 		img : './imgfolder/make your bed.jpg',
@@ -28,7 +28,7 @@ var books = [
 		price : 40
 	},
 	 {
-		title : 'Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future',
+		title :'Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future',
 		auther :  'Ashlee Vance' ,
 		genre : 'Biography',
 		img : './imgfolder/elon musk.jpg',
@@ -62,7 +62,7 @@ var books = [
 		price : 20
 	},
 	 {
-		title : 'The Metamorphosis',
+		title :'The Metamorphosis',
 		auther : 'Franz Kafka',
 		genre : 'Classics',
 		img : './imgfolder/the metamo.jpg',
@@ -71,7 +71,7 @@ var books = [
 
 	},
 	 {
-		title : 'Capital',
+		title :'Capital',
 		auther : 'Karl Marx',
 		genre : 'Economics',
 		img : './imgfolder/capital.jpg',
@@ -79,7 +79,7 @@ var books = [
 		price : 30
 	},
 	 {
-		title : 'Violence: Six Sideways Reflections',
+		title :'Violence: Six Sideways Reflections',
 		auther : 'Slavoj Žižek',
 		genre : 'Philosophy',
 		img : './imgfolder/violence.jpg',
@@ -95,7 +95,7 @@ var books = [
 		price : 100
 	},
 	 {
-		title : 'A History Of Western Thought: From Ancient Greece To The Twentieth Century',
+		title :'A History Of Western Thought: From Ancient Greece To The Twentieth Century',
 		auther : 'Gunnar Skirbekk',
 		genre : 'History , Philosophy',
 		img : './imgfolder/a history of westren thought.jpg',
@@ -103,7 +103,7 @@ var books = [
 		price : 25
 	},
 	{
-		title : 'Les Miserables',
+		title :'Les Miserables',
 		auther :  'Victor Hugo',
 		genre : 'Classics,  Historical Fiction' ,
 		img : './imgfolder/Les Miserables.jpg',
@@ -111,7 +111,7 @@ var books = [
 		price : 200
 	},
 	 {
-		title : 'Hamlet',
+		title :'Hamlet',
 		auther : 'William Shakespeare',
 		genre : 'Classics ,Plays',
 		img : './imgfolder/Hamlet.jpg',
@@ -151,7 +151,7 @@ var books = [
 		price : 5
 	},
 	 {
-		title :' Fear: Trump in the White House ',
+		title :'Fear: Trump in the White House ',
 		auther : 'Bob Woodward',
 		genre : 'Politics',
 		img : './imgfolder/Fear Trump in the White House.jpg',
@@ -159,7 +159,7 @@ var books = [
 		price : 12
 	}, 
 	 {
-		title : 'Thus Spoke Zarathustra',
+		title :'Thus Spoke Zarathustra',
 		auther : 'Friedrich Nietzsche',
 		genre : 'Philosophy',
 		img : './imgfolder/Thus Spoke Zarathustra.jpg',
