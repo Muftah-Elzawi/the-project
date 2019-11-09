@@ -33,7 +33,7 @@ var $DisplyaPage  = function(){
 
  function addSearchGenre(){
 
- $("#search-input").on('keydown', function (e) {
+ $("#search-input").on('keyup', function (e) {
  	var $search = $('#search-input').val()
  	
  	
